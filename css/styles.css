@@ -101,6 +101,16 @@ li {
   /* Could be more or less, depending on screen size */
   border-radius: 6px;
 }
+@media (min-width: 500px) {
+  .modal-content {
+    width: 80%;
+  }
+}
+@media (min-width: 800px) {
+  .modal-content {
+    width: 33%;
+  }
+}
 
 /* The Close Button */
 .close {
@@ -119,7 +129,6 @@ li {
 
 .modal-employee-container,
 .modal-employee-details-container,
-.modal-info-container,
 .modal-employee-image {
   display: block;
   margin-right: auto;

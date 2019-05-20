@@ -20,6 +20,14 @@
   border: 1px solid #888;
   width: 33%; /* Could be more or less, depending on screen size */
   border-radius: 6px;
+
+  @media (min-width: 500px) {
+    width: 80%;
+  }
+
+  @media (min-width: 800px) {
+    width: 33%;
+  }
 }
 
 /* The Close Button */
