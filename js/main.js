@@ -29,7 +29,7 @@ function addItemToList(employee, pos) {
         '\n' +
         '                    <div id="'+ pos +'" class="info-container">\n' +
         '                        <p id="'+ pos +'" class="name">' + employee.name.first + employee.name.last + '</p>\n' +
-        '                        <p id="'+ pos +'" class="email">' + employee.email + '</p>\n' +
+        '                        <p id="'+ pos +'" class="email">' + trimEmail(employee.email) + '</p>\n' +
         '                        <p id="'+ pos +'" class="location">' + employee.location.city + '</p>\n' +
         '                    </div>\n' +
         '                </div>\n' +
@@ -72,4 +72,11 @@ function handleClick(position) {
             + employee.location.state + " " + employee.location.postcode);
         $(".modal-dob").text("Birthday: " + employee.dob.date);
     }
+}
+
+function trimEmail(email) {
+    if (email.length > 25) {
+        return email.substr(0, 25);
+    }
+    return email;
 }

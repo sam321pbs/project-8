@@ -12,10 +12,14 @@
 
 .employee-details-container {
   @include horizontal-container;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 83%;
+
 }
 
 .info-container {
-  margin: 20px;
+  margin: 8px;
 }
 
 .employee-image {
