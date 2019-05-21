@@ -2,15 +2,15 @@ const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 let employeeData;
 
-$.ajax({
-    url: 'https://randomuser.me/api/?results=12',
-    dataType: 'json',
-    success: function(data) {
-        employeeData = data;
-        // console.log(data);
-        handleJSONData(data);
-    }
-});
+fetch('https://randomuser.me/api/?results=12')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(myJson) {
+        employeeData = myJson;
+        // console.log(myJson);
+        handleJSONData(myJson);
+    });
 
 function handleJSONData() {
     for(let i = 0 ; i < employeeData.results.length; i++) {
